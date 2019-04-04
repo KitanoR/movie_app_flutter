@@ -11,7 +11,9 @@ class Media{
   List<dynamic> genreIds;
 
   String getPosterUrl() => getMediumPictureUrl(posterPath);
-
+  String getBackDropUrl() => getLargePictureUrl(backdropPath);
+ String getGenres() => getGenreValue(genreIds);
+ 
   factory Media(Map jsonMap){
     try {
       return new Media.deserialize(jsonMap);  
